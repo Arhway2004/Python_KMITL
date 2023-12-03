@@ -1,0 +1,112 @@
+x1, y1 = eval(input("Input the center coordinates of Rectangle 1 x and y: "))
+w1, h1 = eval(input("Input the width and height of Rectangle 1: "))
+x2, y2 = eval(input("Input the center coordinates of Rectangle 2 x and y: "))
+w2, h2 = eval(input("Input the width and height of Rectangle 2: "))
+# R1
+LR1 = x1 - w1 / 2
+RR1 = x1 + w1 / 2
+TR1 = y1 + h1 / 2
+BR1 = y1 - h1 / 2
+# R2
+LR2 = x2 - w2 / 2
+RR2 = x2 + w2 / 2
+TR2 = y2 + h2 / 2
+BR2 = y2 - h2 / 2
+# formular & result
+if (LR1 >= LR2 and RR1 <= RR2 and TR1 <= TR2 and BR1 >= BR2) or \
+        (LR1 <= LR2 and RR1 >= RR2 and TR1 >= TR2 and BR1 <= BR2):
+    print("Rectangle 1 is inside Rectangle 2")
+elif(LR2 >= LR1 and RR2 <= RR1 and TR2 <= TR1 and BR2 >= BR1) or \
+        (LR2 <= LR1 and RR2 >= RR1 and TR2 >= TR1 and BR2 <= BR1):
+    print("Rectangle 2 is inside Rectangle 1")
+elif RR1 < LR2 or LR1 > RR2 or TR1 < BR2 or BR1 > TR2:
+    print("Rectangles do not overlap")
+else:   
+    print("Rectangles overlap")
+
+
+
+# import turtle
+# xh1,yh1 = eval(input("width x1 and width y1"))
+# xw1,yw1 = eval(input("length x1 and length y1" ))
+# xh2,yh2 = eval(input("width x2 and width y2"))
+# xw2,yw2 = eval(input("length x2 and length y2" ))
+# x,y = 0,1
+# # rectangle1
+# point1_1 = xh1,yh1
+# point1_2 = xh1,yw1
+# point1_3 = xw1,yw1
+# point1_4 = xh1,yw1
+
+# # rectangle2
+# point2_1 = xh2,yh2
+# point2_2 = xh2,yw2
+# point2_3 = xw2,yw2
+# point2_4 = xh2,yw2
+
+# # fomula
+# (point1_1[0]-point1_3[0])*(point1_1[1]-point1_3[1])
+# (point2_1[0]-point2_3[0])*(point2_1[1]-point2_3[1])
+# width = min(point1_1[0],point2_1[0])- max(point1_3[0],point2_3[0])
+# height = min(point1_1[1],point2_1[1])- max(point1_3[1],point2_3[1])
+# print(width)
+# print(height)
+# if width >0 and height >0:
+#     overlapping_area = width * height
+#     print("Overlapping area:", overlapping_area)
+# else:
+#     overlapping_area = 0
+#     print("non-Overlapping area:", overlapping_area)
+
+
+
+
+
+# if (LR1 >= LR2 and RR1 <= RR2 and TR1 <= TR2 and BR1 >= BR2) or \
+#         (LR1 <= LR2 and RR1 >= RR2 and TR1 >= TR2 and BR1 <= BR2):
+#     result = "Rectangle 1 is inside Rectangle 2"
+# elif (LR2 >= LR1 and RR2 <= RR1 and TR2 <= TR1 and BR2 >= BR1) or \
+#         (LR2 <= LR1 and RR2 >= RR1 and TR2 >= TR1 and BR2 <= BR1):
+#     result = "Rectangle 2 is inside Rectangle 1"
+# elif RR1 < LR2 or LR1 > RR2 or TR1 < BR2 or BR1 > TR2:
+#     result = "Rectangles do not overlap"
+# else:
+#     result = "Rectangles overlap"
+
+# print(result)
+
+# # Create a turtle object for rectangle 1
+# rectangle1_turtle = turtle.Turtle()
+# rectangle1_turtle.penup()
+# rectangle1_turtle.goto(LR1, BR1)
+# rectangle1_turtle.pendown()
+# for _ in range(2):
+#     rectangle1_turtle.forward(w1)
+#     rectangle1_turtle.left(90)
+#     rectangle1_turtle.forward(h1)
+#     rectangle1_turtle.left(90)
+
+# # Create a turtle object for rectangle 2
+# rectangle2_turtle = turtle.Turtle()
+# rectangle2_turtle.penup()
+# rectangle2_turtle.goto(LR2, BR2)
+# rectangle2_turtle.pendown()
+# for _ in range(2):
+#     rectangle2_turtle.forward(w2)
+#     rectangle2_turtle.left(90)
+#     rectangle2_turtle.forward(h2)
+#     rectangle2_turtle.left(90)
+
+# # Close the graphics window on click
+# turtle.exitonclick()
+
+
+
+
+
+
+
+
+
+
+

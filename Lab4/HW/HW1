@@ -1,0 +1,230 @@
+# import turtle
+
+# a = turtle.Turtle()
+# turtle = turtle.Screen()
+# a.speed(10)
+# x0,y0 = eval(input("put point0 coordination:"))
+# x1,y1 = eval(input("put point1 coordination:"))
+# x2,y2 = eval(input("put point2 coordination:"))
+# # turtle
+# a.penup()
+# a.goto(x0,y0)
+# a.pendown()
+# a.write("point0")
+# a.goto(x1,y1)
+# a.write("point1")
+# a.penup()
+# a.goto(x2, y2)
+# a.pendown()
+# cross_product_value = (x1 - x0) * (y2 - y0) - (x2 - x0) * (y1 - y0)
+# # formular
+# if y0 == y1: 
+#     if cross_product_value > 0:
+#         a.write("p2 is on the lower side of the line between p0 and p1.")
+#     elif cross_product_value < 0:
+#         a.write("p2 is on the upper side of the line between p0 and p1.")
+#     else:
+#         a.write("p2 is on the line between p0 and p1.")
+# elif x0 == x1 == x2 and x0 == x1 == x2:
+#     a.write("p2 is on the same line as the p0 and p1.")
+# else:
+#     side = "left" if cross_product_value > 0 else "right"
+#     a.write(f"point2 is on the {side} side of the line between point0 and point1.")
+# a.end_fill()
+# a.hideturtle()
+# turtle.exitonclick()
+# p0=(x0,y0)
+# p1=(x1,y1)
+# p2=(x2,y2)
+# m = (y0 - y1) / (x0 - x1)
+
+
+# x = (x0-x1)/2
+# y = (y0-y1)/2
+# # if x0 == 0 and x1 == 0 and cross_product_value > 0:
+#         a.write("p2 is on the upper side of the line between p0 and p1.")
+# elif x0 == 0 and x1 == 0 and cross_product_value < 0:
+#         a.write("p2 is on the lower side of the line between p0 and p1.")
+# elif cross_product_value > 0:
+#         a.write("p2 is on the left side of the line between p0 and p1.")
+# elif cross_product_value < 0:
+#         a.write("p2 is on the right side of the line between p0 and p1.")
+# else:
+#         a.write("p2 is on the line between p0 and p1.")
+
+
+# if x2 > x0 and x2 > x1 and y2 > y0 and y2 >y1 : 
+#     a.write("point2 is on the right")
+# elif x2 < x0 and x2 < x1 and y2 < y0 and y2 <y1: 
+#     a.write("point2 is on the left")
+# else:
+#     a.write("point2")
+
+
+
+import turtle
+
+a = turtle.Turtle()
+turtle = turtle.Screen()
+a.speed(10)
+x0,y0 = eval(input("input point0 coordination:"))
+x1,y1 = eval(input("input point1 coordination:"))
+x2,y2 = eval(input("input point2 coordination:"))
+a.penup()
+a.goto(x0,y0)
+a.pendown()
+a.write("point0")
+a.goto(x1,y1)
+a.write("point1")
+a.penup()
+a.goto(x2, y2)
+a.pendown()
+# formular
+
+m = (y1 - y0) / (x1 - x0)
+c = y0 - (m * x0)
+formular = x2 * m + c
+if abs(formular - y2) == 0 :
+    if x2 > x0 and x2 < x1:
+        a.write("P2 is on the line")
+    elif x2 > x0 and x2 > x1:
+        a.write("P2 is on the right side") 
+    elif x2 < x0 and x2 < x1:
+        a.write("P2 is on the left side")
+    elif x2 < x0 and x2 > x1:
+        a.write("P2 is on the line")     
+elif x2 > x0 and x2 < x1:
+    a.write("P2 is on the midle P0 is on the left and P1 is on the right")
+elif x2 > x0 and x2 > x1:
+    a.write("P2 is on the right side")
+elif x2 < x0 and x2 < x1:
+    a.write("P2 is on the left side")
+elif y0 == y1: 
+    if x2 > x0:
+        a.write("p2 is on the lower side of the line.")
+    elif x2 > x1:
+        a.write("p2 is on the upper side of the line.")
+    elif x2 == x1 == x0:
+        a.write("p2 is on the same line as p0 and p1.")
+a.end_fill()
+a.hideturtle()
+turtle.exitonclick()
+
+# import turtle
+# x = int(input("Enter x coordinate of P0:"))
+# y = int(input("Enter y coordinate of P0:"))
+# x1 = int(input("Enter x coordinate of P1:"))
+# y1 = int(input("Enter y coordinate of P1:"))
+# x2 = int(input("Enter x coordinate of P2:"))
+# y2 = int(input("Enter y coordinate of P2:"))
+# li = turtle.Turtle()
+# m = (y1 - y) / (x1 - x)
+# c = y - (m * x)
+# y2_on_line = x2 * m + c
+# if abs(y2_on_line - y2) == 0 :
+#     if x2 > x and x2 < x1:
+#         li.penup()
+#         li.goto(x, y)
+#         li.pendown()
+#         li.write(".")
+#         li.write("P0")
+#         li.goto(x1, y1)
+#         li.write(".")
+#         li.write("P1")
+#         li.penup()
+#         li.goto(x2, y2)
+#         li.pendown()
+#         li.write(".")
+#         li.hideturtle()
+#         li.write("P2 is on the line")
+#     elif x2 > x and x2 > x1:
+#         li.penup()
+#         li.goto(x, y)
+#         li.pendown()
+#         li.write(".")
+#         li.write("P0")
+#         li.goto(x1, y1)
+#         li.write(".")
+#         li.write("P1")
+#         li.penup()
+#         li.goto(x2, y2)
+#         li.pendown()
+#         li.write(".")
+#         li.hideturtle()
+#         li.write("P2 is on the right side of P0 and P1")    
+#     elif x2 < x and x2 < x1:
+#         li.penup()
+#         li.goto(x, y)
+#         li.pendown()
+#         li.write(".")
+#         li.write("P0")
+#         li.goto(x1, y1)
+#         li.write(".")
+#         li.write("P1")
+#         li.penup()
+#         li.goto(x2, y2)
+#         li.pendown()
+#         li.write(".")
+#         li.hideturtle()
+#         li.write("P2 is on the left side of P0 and P1")
+#     elif x2 < x and x2 > x1:
+#         li.penup()
+#         li.goto(x, y)
+#         li.pendown()
+#         li.write(".")
+#         li.write("P0")
+#         li.goto(x1, y1)
+#         li.write(".")
+#         li.write("P1")
+#         li.penup()
+#         li.goto(x2, y2)
+#         li.pendown()
+#         li.write(".")
+#         li.hideturtle()
+#         li.write("P2 is on the line")        
+# elif x2 > x and x2 < x1:
+#     li.penup()
+#     li.goto(x, y)
+#     li.pendown()
+#     li.write(".")
+#     li.write("P0")
+#     li.goto(x1, y1)
+#     li.write(".")
+#     li.write("P1")
+#     li.penup()
+#     li.goto(x2, y2)
+#     li.pendown()
+#     li.write(".")
+#     li.hideturtle()
+#     li.write("P2 is on the right side of P0 and left side of P1")
+# elif x2 > x and x2 > x1:
+#     li.penup()
+#     li.goto(x, y)
+#     li.pendown()
+#     li.write(".")
+#     li.write("P0")
+#     li.goto(x1, y1)
+#     li.write(".")
+#     li.write("P1")
+#     li.penup()
+#     li.goto(x2, y2)
+#     li.pendown()
+#     li.write(".")
+#     li.hideturtle()
+#     li.write("P2 is on the right side of P0 and P1")
+# elif x2 < x and x2 < x1:
+#     li.penup()
+#     li.goto(x, y)
+#     li.pendown()
+#     li.write(".")
+#     li.write("P0")
+#     li.goto(x1, y1)
+#     li.write(".")
+#     li.write("P1")
+#     li.penup()
+#     li.goto(x2, y2)
+#     li.pendown()
+#     li.write(".")
+#     li.hideturtle()
+#     li.write("P2 is on the left side of P0 and P1")
+# turtle.done()
